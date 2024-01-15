@@ -4,12 +4,11 @@
   </ng-container>
   <ng-container *ngIf="senadores.length > 0">
     <ng-container *ngFor="let member of senadores">
-      <div class="card-container">
+      <div class="card-container" routerLink="/senador/{{ member.id }}">
         <img
           [src]="member.foto"
           alt="Foto demo"
           class="card-container-img"
-          routerLink="/detail/{{ member.id }}"
         />
         <div class="card-container-text">
           <div class="card-container-text-name">
@@ -26,7 +25,7 @@
   </ng-container>
   <ng-container *ngIf="diputados && diputados.length > 0">
     <div *ngFor="let member of diputados">
-      <div class="card-container">
+      <div class="card-container" routerLink="/diputado/10">
         <img
           src="assets/placeholder.jpg"
           alt="Foto demo"

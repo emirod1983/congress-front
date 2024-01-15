@@ -16,7 +16,15 @@ export class CongressService {
     return this.http.get<Senador[]>(`${this.baseUrl}/CamaraAlta`);
   }
 
+  getSenator(id: number): Observable<Senador> {
+    return this.http.get<Senador>(`${this.baseUrl}/CamaraAlta/id=${id}`);
+  }
+
   getDeputies(): Observable<Diputado[]> {
     return this.http.get<Diputado[]>(`${this.baseUrl}/CamaraBaja`);
+  }
+
+  getDeputy(id: number): Observable<Diputado> {
+    return this.http.get<Diputado>(`${this.baseUrl}/CamaraBaja/id=${id}`);
   }
 }

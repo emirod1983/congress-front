@@ -21,8 +21,9 @@
   background-color: lightblue;
   width: 20rem;
   height: 5rem;
-  padding: .5rem;
+  padding: 0.5rem;
   margin: 1rem;
+  cursor: pointer;
 
   &-img {
     max-width: 4rem;
@@ -50,4 +51,9 @@
       white-space: nowrap;
     }
   }
+}
+
+.card-container:hover .card-container-text {
+  padding-left: .2rem;
+  padding-top: .1rem;
 }
