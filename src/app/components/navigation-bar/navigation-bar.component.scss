@@ -1,0 +1,38 @@
+.navigation-bar {
+  box-sizing: border-box;
+  width: auto;
+  height: 6rem;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+
+  &-logo {
+    border: solid;
+    border-radius: 2.75rem;
+    border-width: 0.1rem;
+    border-color: purple;
+    height: 4rem;
+  }
+
+  &-item {
+    padding: 1rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    line-height: 4rem;
+    text-decoration: none;
+    background-color: #e8e8e8;
+    color: #3d3d3d;  
+  }
+
+  &-item:hover {
+    color: white;
+    border-radius: 2.75rem;
+    background-color: purple;
+  }
+
+  &-item:active {
+    background-color: black;
+  }
+}

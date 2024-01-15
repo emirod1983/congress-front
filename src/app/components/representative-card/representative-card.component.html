@@ -1,0 +1,46 @@
+<div class="body-container">
+  <ng-container *ngIf="senadores.length == 0 && diputados.length == 0">
+    <div>No hay representantes por mostar.</div>
+  </ng-container>
+  <ng-container *ngIf="senadores.length > 0">
+    <ng-container *ngFor="let member of senadores">
+      <div class="card-container">
+        <img
+          [src]="member.foto"
+          alt="Foto demo"
+          class="card-container-img"
+          routerLink="/detail/{{ member.id }}"
+        />
+        <div class="card-container-text">
+          <div class="card-container-text-name">
+            {{ member.apellido }}, {{ member.nombre }}
+          </div>
+          <div class="card-container-text-generic">{{ member.bloque }}</div>
+          <div class="card-container-text-generic">
+            {{ member.partidoAlianza }}
+          </div>
+          <div class="card-container-text-generic">{{ member.provincia }}</div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="diputados && diputados.length > 0">
+    <div *ngFor="let member of diputados">
+      <div class="card-container">
+        <img
+          src="assets/placeholder.jpg"
+          alt="Foto demo"
+          class="card-container-img"
+        />
+        <div class="card-container-text">
+          <div class="card-container-text-name">
+            {{ member.apellido }}, {{ member.nombre }}
+          </div>
+          <div class="card-container-text-generic">{{ member.bloque }}</div>
+          <div class="card-container-text-generic">{{ member.distrito }}</div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #noResults> No hay representantes por mostar. </ng-template>
+</div>
